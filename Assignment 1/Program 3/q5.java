@@ -1,4 +1,16 @@
 class Cycle {
+	public int wheels (Cycle c) {
+		if (c.toString() == "Unicycle") {
+			return 1;
+		}
+		else if (c.toString() == "Bicycle") {
+			return 2;
+		}
+		else if (c.toString() == "Tricycle") {
+			return 3;
+		}
+		return 0;
+	}
 
 }
 
@@ -25,7 +37,7 @@ class Tricycle extends Cycle {
 
 public class q5 {
 	public static void ride (Cycle c) {
-		System.out.println("Riding a " + c.toString());
+		System.out.println("Riding a " + c.toString() + ". And it has " + c.wheels(c) + " wheels");
 	}
 	public static void main(String[] args) {
 		Unicycle u = new Unicycle();
